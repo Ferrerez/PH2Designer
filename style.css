@@ -383,81 +383,10 @@ footer {
 } 
 
 /* Botão flutuante WhatsApp - Implementação Robusta */
-.whatsapp-float {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  z-index: 99999 !important;
-  background: #25d366 !important;
-  color: #fff !important;
-  width: 60px !important;
-  height: 60px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3) !important;
-  font-size: 2rem !important;
-  transition: all 0.3s ease !important;
-  cursor: pointer !important;
-  text-decoration: none !important;
-  border: none !important;
-  outline: none !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  max-width: 60px !important;
-  max-height: 60px !important;
-  overflow: hidden !important;
-}
-
-.whatsapp-float:hover {
-  background: #128c7e !important;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.4) !important;
-  transform: scale(1.1) !important;
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-.whatsapp-float i {
-  font-size: 2rem !important;
-  color: #fff !important;
-  text-decoration: none !important;
-  border: none !important;
-  background: none !important;
-  box-shadow: none !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  height: 100% !important;
-}
+/* Removido para usar estilos inline */
 
 /* Garantir que o botão apareça em todas as telas */
-@media (max-width: 768px) {
-  .whatsapp-float {
-    bottom: 15px !important;
-    right: 15px !important;
-    width: 55px !important;
-    height: 55px !important;
-    font-size: 1.8rem !important;
-  }
-  .whatsapp-float i {
-    font-size: 1.8rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .whatsapp-float {
-    bottom: 10px !important;
-    right: 10px !important;
-    width: 50px !important;
-    height: 50px !important;
-    font-size: 1.6rem !important;
-  }
-  .whatsapp-float i {
-    font-size: 1.6rem !important;
-  }
-}
+/* Removido para usar estilos inline */
 
 /* Menu hambúrguer */
 .menu-toggle {

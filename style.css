@@ -405,15 +405,15 @@ footer {
 }
 @media (max-width: 600px) {
   .whatsapp-float {
-    right: 2vw;
-    bottom: 2vw;
+    position: fixed !important;
+    right: 15px;
+    bottom: 15px;
     width: 48px;
     height: 48px;
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
     z-index: 9999 !important;
-    position: fixed !important;
   }
   .whatsapp-float svg {
     width: 28px;

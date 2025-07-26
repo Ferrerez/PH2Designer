@@ -368,35 +368,52 @@ footer {
   }
 } 
 
-/* Botão WhatsApp Flutuante - Implementação Limpa */
+/* Botão flutuante WhatsApp */
 .whatsapp-float {
+  /* Mantém o fundo verde */
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-  width: 60px;
-  height: 60px;
+  bottom: 28px;
+  right: 28px;
+  z-index: 2000;
+  background: #25d366;
+  color: #fff;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  font-size: 2.3rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
-
 .whatsapp-float:hover {
-  background-color: #128C7E;
-  transform: scale(1.1);
+  background: #128c7e;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+  color: #fff;
+  text-decoration: none;
 }
+.whatsapp-float i {
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  display: flex;
+} 
 
-.whatsapp-float svg {
-  width: 30px;
-  height: 30px;
+.whatsapp-float, .whatsapp-float:visited, .whatsapp-float:active, .whatsapp-float:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+}
+.whatsapp-float i {
+  text-decoration: none !important;
+  outline: none !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  vertical-align: middle !important;
 }
 
 /* Responsividade para mobile */

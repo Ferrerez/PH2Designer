@@ -669,6 +669,12 @@ footer {
   
   .hero-logo-titulo h1 {
     font-size: 1.8rem !important;
+    background: linear-gradient(45deg, #C0C0C0, #E8E8E8, #C0C0C0) !important;
+    background-size: 200% 200% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    animation: shine 3s ease-in-out infinite !important;
   }
   .logo {
     margin-bottom: 0;

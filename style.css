@@ -321,7 +321,10 @@ footer {
 }
 @media (max-width: 600px) {
   .container {
-    width: 98%;
+    width: 95%;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
   .hero-content h1 {
     font-size: 2rem;
@@ -365,12 +368,12 @@ footer {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  z-index: 999;
+  z-index: 9999;
   background: #25D366;
   color: #fff;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   width: 64px;
@@ -380,6 +383,8 @@ footer {
   font-size: 1.1rem;
   transition: box-shadow 0.2s, background 0.2s;
   padding: 0;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 .whatsapp-float:hover {
   background: #128C7E;
@@ -396,16 +401,29 @@ footer {
 }
 @media (max-width: 600px) {
   .whatsapp-float {
-    right: 10px;
-    bottom: 10px;
+    right: 5px;
+    bottom: 5px;
     width: 48px;
     height: 48px;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9999 !important;
   }
   .whatsapp-float svg {
     width: 28px;
     height: 28px;
   }
-} 
+}
+
+/* Garantir que o botão apareça em todos os dispositivos */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
 
 /* Menu hambúrguer */
 .menu-toggle {

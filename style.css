@@ -25,7 +25,7 @@ header {
   padding: 16px 0;
 }
 .logo {
-  height: 350px;
+  height: 600px;
   width: auto;
 }
 header nav ul {
@@ -46,14 +46,15 @@ header nav ul li a {
   padding: 0 18px;
 }
 nav a {
-  color: #FFD700;
+  color: #C0C0C0;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
   transition: color 0.2s;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 nav a:hover {
-  color: #fff;
+  color: #FFD700;
 }
 
 .hero {
@@ -65,7 +66,22 @@ nav a:hover {
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 16px;
-  color: #FFD700;
+  color: #C0C0C0;
+  text-shadow: 
+    0 0 10px rgba(192, 192, 192, 0.5),
+    0 0 20px rgba(192, 192, 192, 0.3),
+    0 0 30px rgba(192, 192, 192, 0.1);
+  background: linear-gradient(45deg, #C0C0C0, #E8E8E8, #C0C0C0);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 .hero-content p {
   font-size: 1.3rem;
@@ -83,7 +99,7 @@ nav a:hover {
   transition: background 0.2s, color 0.2s;
 }
 .btn-cta:hover {
-  background: #fff;
+  background: #000;
   color: #FFD700;
 }
 
@@ -101,8 +117,9 @@ nav a:hover {
   flex: 2;
 }
 .sobre-texto h2 {
-  color: #FFD700;
+  color: #C0C0C0;
   margin-bottom: 18px;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
 }
 .sobre-texto ul {
   margin-top: 18px;
@@ -121,9 +138,10 @@ nav a:hover {
   padding: 60px 0;
 }
 .servicos h2 {
-  color: #FFD700;
+  color: #C0C0C0;
   text-align: center;
   margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
 }
 .servicos-grid {
   display: grid;
@@ -139,8 +157,9 @@ nav a:hover {
   border-bottom: 4px solid #FFD700;
 }
 .servico-card h3 {
-  color: #FFD700;
+  color: #C0C0C0;
   margin-bottom: 12px;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 
 .portfolio {
@@ -148,9 +167,10 @@ nav a:hover {
   padding: 60px 0;
 }
 .portfolio h2 {
-  color: #FFD700;
+  color: #C0C0C0;
   text-align: center;
   margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
 }
 .portfolio-grid {
   display: grid;
@@ -178,8 +198,9 @@ nav a:hover {
   border-top: 3px solid #FFD700;
 }
 .diferencial-card h4 {
-  color: #FFD700;
+  color: #C0C0C0;
   margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 
 .depoimentos {
@@ -187,9 +208,10 @@ nav a:hover {
   padding: 60px 0;
 }
 .depoimentos h2 {
-  color: #FFD700;
+  color: #C0C0C0;
   text-align: center;
   margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
 }
 .depoimentos-slider {
   display: flex;
@@ -252,14 +274,16 @@ nav a:hover {
   color: #fff;
 }
 .contato-info h3 {
-  color: #FFD700;
+  color: #C0C0C0;
   margin-bottom: 12px;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 .redes-sociais a {
-  color: #FFD700;
+  color: #C0C0C0;
   text-decoration: none;
   margin-right: 8px;
   font-weight: 700;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 .redes-sociais a:hover {
   color: #fff;
@@ -267,10 +291,11 @@ nav a:hover {
 
 footer {
   background: #000;
-  color: #FFD700;
+  color: #C0C0C0;
   text-align: center;
   padding: 18px 0;
   font-size: 1rem;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 
 .hero-logo-titulo {
@@ -435,5 +460,49 @@ footer {
   header nav ul li a {
     display: block;
     padding: 16px 24px;
+  }
+} 
+
+.back-to-top {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 999;
+  background: #000;
+  color: #fff;
+  border: 2px solid #C0C0C0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+  background: #C0C0C0;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    left: 16px;
+    bottom: 16px;
+    width: 45px;
+    height: 45px;
+  }
+  .back-to-top svg {
+    width: 18px;
+    height: 18px;
   }
 } 

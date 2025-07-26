@@ -245,34 +245,26 @@
     <i class="fa-brands fa-whatsapp" style="color: #fff; text-decoration: none; border: none; background: none; box-shadow: none; display: flex;"></i>
   </a>
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.querySelector('header nav ul');
-    
-    menuToggle.addEventListener('click', function() {
-      nav.classList.toggle('open');
-    });
-    
-    // Fechar menu ao clicar fora dele
-    document.addEventListener('click', function(event) {
-      const isClickInsideMenu = nav.contains(event.target);
-      const isClickOnToggle = menuToggle.contains(event.target);
+    // Fechar menu Bootstrap ao clicar fora dele
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
       
-      if (!isClickInsideMenu && !isClickOnToggle && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-      }
+      // Fechar menu ao clicar fora dele
+      document.addEventListener('click', function(event) {
+        const isClickInsideMenu = navbarCollapse && navbarCollapse.contains(event.target);
+        const isClickOnToggle = navbarToggler && navbarToggler.contains(event.target);
+        
+        if (navbarCollapse && navbarCollapse.classList.contains('show') && 
+            !isClickInsideMenu && !isClickOnToggle) {
+          // Fechar o menu usando Bootstrap
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+          });
+          bsCollapse.hide();
+        }
+      });
     });
-    
-    function handleResize() {
-      if(window.innerWidth <= 900) {
-        menuToggle.style.display = 'block';
-        nav.classList.remove('open');
-      } else {
-        menuToggle.style.display = 'none';
-        nav.classList.remove('open');
-      }
-    }
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('DOMContentLoaded', handleResize);
   </script>
   <button class="back-to-top" id="backToTop" title="Voltar ao topo" style="display: none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

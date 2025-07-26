@@ -7,31 +7,43 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap apenas para o menu -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container header-flex">
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" style="display:none;">
-        <span></span>
-        <span></span>
-        <span></span>
+  <!-- Navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(0,0,0,0.95) !important; backdrop-filter: blur(10px);">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#inicio">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#servicos">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfólio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#redes-sociais">Redes Sociais</a>
+          </li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
+  <!-- Fim do Navbar Bootstrap -->
   <section class="hero" id="inicio">
     <div class="container hero-content">
-      <div class="hero-logo-titulo">
-        <img src="assets/logo-ph2designer.png" alt="Logo PH2Designer" class="logo">
-        <h1>Transformando espaços, inspirando vidas</h1>
+      <div class="hero-logo-titulo" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 0; margin: 0; padding: 0;">
+        <img src="assets/logo-ph2designer.png" alt="Logo PH2Designer" style="height: 600px; width: auto; margin: 0; padding: 0; display: block;">
+        <h1 style="margin: 0; padding: 0; display: block; font-size: 2.8rem; color: #C0C0C0; text-shadow: 0 0 10px rgba(192, 192, 192, 0.5), 0 0 20px rgba(192, 192, 192, 0.3), 0 0 30px rgba(192, 192, 192, 0.1); background: linear-gradient(45deg, #C0C0C0, #E8E8E8, #C0C0C0); background-size: 200% 200%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shine 3s ease-in-out infinite;">Transformando espaços, inspirando vidas</h1>
       </div>
       <p>Decoração de interiores e reformas residenciais e comerciais com excelência.</p>
       <a href="https://wa.me/5521981334812?text=Olá%2C%20gostei%20do%20seu%20trabalho%20e%20queria%20solicitar%20um%20orçamento!" class="btn-cta" target="_blank" rel="noopener">Solicite um orçamento</a>
@@ -178,47 +190,45 @@
       </div>
     </div>
   </section>
-  <section class="depoimentos" id="depoimentos">
+  <section class="instagram-feed" id="instagram">
     <div class="container">
-      <h2>Depoimentos</h2>
-      <div class="depoimentos-slider">
-        <!-- Espaço para depoimentos de clientes -->
-      </div>
+      <h2>Instagram</h2>
+      <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+      <script src="https://static.elfsight.com/platform/platform.js" async></script>
+      <div class="elfsight-app-e209a71b-f0c4-49bf-8ecc-8f9e10778b02" data-elfsight-app-lazy></div>
     </div>
   </section>
-  <section class="contato" id="contato">
-    <div class="container contato-flex">
-      <div class="contato-info">
-        <h3>Contato</h3>
-        <p><strong>E-mail:</strong> contato@ph2designer.com</p>
-        <p><strong>Telefone:</strong> (21) 98133-4812</p>
-      </div>
-      <div class="redes-sociais-info" style="flex: 1; min-width: 220px;">
-        <h3 style="color: #C0C0C0; margin-bottom: 12px; text-align: left; text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);">Redes Sociais</h3>
-        <div class="redes-sociais" style="display: flex; gap: 22px; margin-top: 12px;">
-          <a href="https://www.instagram.com/ph2designer/" target="_blank" rel="noopener" title="Instagram" style="display: inline-block;">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="28" height="28" rx="8" stroke="#fff" stroke-width="2" fill="none"/>
-              <circle cx="16" cy="16" r="6" stroke="#fff" stroke-width="2" fill="none"/>
-              <circle cx="23" cy="9" r="1.5" fill="#fff"/>
-            </svg>
+  
+  <section class="redes-sociais" id="redes-sociais">
+    <div class="container">
+      <h2>Redes Sociais</h2>
+      <div class="redes-sociais-content">
+        <div class="redes-sociais-grid">
+          <a href="https://www.instagram.com/ph2designer/" target="_blank" rel="noopener" class="rede-social-card">
+            <i class="fab fa-instagram"></i>
+            <h3>Instagram</h3>
+            <p>@ph2designer</p>
           </a>
-          <a href="https://www.facebook.com/phvalle" target="_blank" rel="noopener" title="Facebook" style="display: inline-block;">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="28" height="28" rx="8" stroke="#fff" stroke-width="2" fill="none"/>
-              <path d="M18 25v-7h2.5l.5-3H18v-2c0-.8.2-1.3 1.3-1.3H21V9.2C20.7 9.1 19.9 9 19 9c-2.1 0-3.5 1.3-3.5 3.7V15H13v3h2.5v7h2.5z" fill="#fff"/>
-            </svg>
+          <a href="https://www.facebook.com/phvalle" target="_blank" rel="noopener" class="rede-social-card">
+            <i class="fab fa-facebook"></i>
+            <h3>Facebook</h3>
+            <p>PH2Designer</p>
           </a>
-          <a href="https://wa.me/5521981334812" target="_blank" rel="noopener" title="WhatsApp" style="display: inline-block;">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="28" height="28" rx="8" stroke="#fff" stroke-width="2" fill="none"/>
-              <path d="M21.5 18.5c-.3-.2-1.7-.8-1.9-.9-.2-.1-.3-.1-.5.1-.1.2-.6.8-.7 1-.1.1-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.2-.3.3-.4.1-.1.1-.2.2-.4.1-.2 0-.3 0-.4 0-.1-.5-1.2-.7-1.6-.2-.4-.4-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 2 0 1.2.9 2.3 1.1 2.5.2.2 1.7 2.6 4.2 3.5.6.2 1 .4 1.4.5.6.1 1.1.2 1.5.1.4-.1 1.3-.5 1.5-1 .2-.5.2-1 .1-1.1-.1-.1-.3-.2-.6-.3z" fill="#fff"/>
-            </svg>
+          <a href="https://wa.me/5521981334812" target="_blank" rel="noopener" class="rede-social-card">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <p>(21) 98133-4812</p>
+          </a>
+          <a href="mailto:contato@ph2designer.com" class="rede-social-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>contato@ph2designer.com</p>
           </a>
         </div>
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container footer-flex">
       <span>&copy; 2025 PH2Designer. Todos os direitos reservados.</span>
@@ -288,6 +298,9 @@
       });
     });
   </script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
     // Carrossel de Vídeos
     document.addEventListener('DOMContentLoaded', function() {
@@ -351,12 +364,6 @@
           updateCarousel();
         }
       });
-      
-      // Auto-play (opcional - descomente se quiser)
-      // setInterval(() => {
-      //   currentSlide = (currentSlide + 1) % totalSlides;
-      //   updateCarousel();
-      // }, 5000);
     });
   </script>
 </body>

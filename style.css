@@ -2,6 +2,7 @@ html {
   overflow-x: hidden;
   width: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,10 +14,42 @@ body {
   width: 100%;
   box-sizing: border-box;
   position: relative;
+  min-height: 100vh;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Eliminar qualquer elemento branco - mas preservar botões */
+* {
+  background-color: inherit !important;
+}
+
+/* Garantir que o body e html não tenham background branco */
+html, body {
+  background: #111 !important;
+}
+
+/* Preservar botões e elementos importantes */
+.btn-cta,
+.btn-primary,
+.btn-secondary,
+.navbar-toggler,
+.carousel-btn,
+.back-to-top,
+.whatsapp-float {
+  background-color: initial !important;
+}
+
+/* Remover qualquer padding ou margin que possa criar espaços brancos */
+.navbar-brand,
+.navbar-nav,
+.navbar-collapse {
+  background: transparent !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .container {
@@ -25,13 +58,49 @@ body {
   margin: 0 auto;
 }
 
-header {
-  background: #000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* Sobrescrever estilos do Bootstrap que interferem */
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+  background: transparent !important;
 }
+
+/* Remover qualquer background branco do Bootstrap */
+.navbar .container,
+.navbar-collapse,
+.navbar-nav {
+  background: transparent !important;
+}
+
+/* Garantir que não haja espaços brancos */
+.navbar {
+  background: rgba(0,0,0,0.95) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Garantir que as cores originais sejam mantidas */
+.sobre h2,
+.servicos h2,
+.portfolio h2,
+.depoimentos h2,
+.contato h2 {
+  color: #C0C0C0 !important;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3) !important;
+}
+
+/* Garantir que os textos mantenham a cor original */
+.sobre p,
+.sobre li,
+.diferencial-card p,
+.servico-card p {
+  color: #C0C0C0 !important;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3) !important;
+}
+
+/* Header antigo removido - substituído por Bootstrap navbar */
+
 .header-flex {
   display: flex;
   align-items: center;
@@ -41,6 +110,8 @@ header {
 .logo {
   height: 600px;
   width: auto;
+  margin: 0;
+  padding: 0;
 }
 header nav ul {
   display: flex;
@@ -74,8 +145,9 @@ nav a:hover {
 .hero {
   background: linear-gradient(120deg, #222 60%, #FFD700 100%);
   color: #fff;
-  padding: 80px 0 60px 0;
+  padding: 60px 0 60px 0;
   text-align: center;
+  margin-top: 60px;
 }
 .hero-content h1 {
   font-size: 2.8rem;
@@ -101,22 +173,28 @@ nav a:hover {
   font-size: 1.3rem;
   margin-bottom: 32px;
 }
+/* Garantir que o botão CTA apareça */
 .btn-cta {
-  background: #FFD700;
-  color: #111;
-  padding: 14px 36px;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-.btn-cta:hover {
-  background: #000;
-  color: #FFD700;
+  background: #FFD700 !important;
+  color: #111 !important;
+  padding: 14px 36px !important;
+  border: none !important;
+  border-radius: 30px !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transition: background 0.2s, color 0.2s !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
+.btn-cta:hover {
+  background: #000 !important;
+  color: #FFD700 !important;
+}
+
+/* Restaurar estilos originais das seções */
 .sobre {
   background: #181818;
   padding: 60px 0;
@@ -128,16 +206,29 @@ nav a:hover {
   align-items: center;
 }
 .sobre-texto {
-  flex: 2;
+  flex: 1;
+  min-width: 300px;
 }
 .sobre-texto h2 {
   color: #C0C0C0;
+  font-size: 2rem;
   margin-bottom: 18px;
   text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
 }
 .sobre-texto ul {
-  margin-top: 18px;
-  padding-left: 18px;
+  list-style: none;
+  padding: 0;
+}
+.sobre-texto ul li {
+  color: #C0C0C0;
+  margin-bottom: 8px;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+}
+.sobre-texto p {
+  color: #C0C0C0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 .sobre-img {
   flex: 1;
@@ -326,22 +417,80 @@ nav a:hover {
   margin-bottom: 10px;
   text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
+.diferencial-card p {
+  color: #C0C0C0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+}
 
-.depoimentos {
+.instagram-feed {
   background: #181818;
   padding: 60px 0;
 }
-.depoimentos h2 {
+.instagram-feed h2 {
   color: #C0C0C0;
   text-align: center;
   margin-bottom: 40px;
   text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
 }
-.depoimentos-slider {
+
+.redes-sociais {
+  background: #111;
+  padding: 60px 0;
+}
+.redes-sociais h2 {
+  color: #C0C0C0;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+}
+.redes-sociais-content {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
   justify-content: center;
+}
+.redes-sociais-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.rede-social-card {
+  background: #222;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #C0C0C0;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.rede-social-card:hover {
+  transform: translateY(-5px);
+  border-color: #FFD700;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  color: #FFD700;
+}
+.rede-social-card i {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+  color: #FFD700;
+}
+.rede-social-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #C0C0C0;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+}
+.rede-social-card p {
+  font-size: 1rem;
+  color: #C0C0C0;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 
 .contato {
@@ -426,7 +575,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 0;
 }
 .hero-logo-titulo h1 {
   margin: 0;
@@ -434,7 +583,12 @@ footer {
 
 /* Responsividade */
 @media (max-width: 900px) {
-  .header-flex, .sobre-flex, .contato-flex {
+  .header-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sobre-flex, .contato-flex {
     flex-direction: column;
     gap: 24px;
   }
@@ -444,6 +598,13 @@ footer {
   .sobre-imagem {
     max-width: 100%;
     margin-top: 20px;
+  }
+  .menu-toggle {
+    display: flex;
+    order: 2;
+  }
+  header nav {
+    order: 1;
   }
 }
 @media (max-width: 600px) {
@@ -456,6 +617,9 @@ footer {
     max-width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
+  }
+  .hero {
+    padding: 40px 0 40px 0;
   }
   .hero-content h1 {
     font-size: 2rem;
@@ -471,14 +635,47 @@ footer {
   .diferencial-card {
     margin: 0 auto 24px auto !important;
   }
+  
+  .redes-sociais-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .rede-social-card {
+    min-width: 280px;
+  }
+  
+  .rede-social-card {
+    padding: 24px 16px;
+  }
+  
+  .rede-social-card i {
+    font-size: 2.5rem;
+  }
+  
+
+  
   .hero-logo-titulo {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center;
+    gap: 0 !important;
+  }
+  
+  .hero-logo-titulo img {
+    height: 400px !important;
+  }
+  
+  .hero-logo-titulo h1 {
+    font-size: 1.8rem !important;
   }
   .logo {
-    margin-bottom: 18px;
+    margin-bottom: 0;
+  }
+  .hero-logo-titulo h1 {
+    margin: 0 !important;
+    margin-bottom: 0 !important;
   }
   .hero-content, .sobre-flex, .contato-flex, .footer-flex {
     flex-direction: column !important;
@@ -492,6 +689,33 @@ footer {
     align-items: center !important;
     text-align: center !important;
     margin: 0 auto;
+  }
+  
+  /* Centralizar Redes Sociais em mobile - sobrescrever estilos inline */
+  .redes-sociais-info h3 {
+    text-align: center !important;
+    margin: 0 auto 15px auto !important;
+  }
+  
+  .redes-sociais-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .redes-sociais {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 22px !important;
+    margin-top: 12px !important;
+  }
+  
+  .redes-sociais a {
+    display: inline-block !important;
   }
 } 
 
@@ -532,9 +756,9 @@ footer {
   }
   header nav ul {
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
-    width: 100vw;
+    width: 100%;
     background: #000;
     flex-direction: column;
     align-items: flex-start;
@@ -542,6 +766,7 @@ footer {
     padding: 0;
     display: none;
     box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    z-index: 1000;
   }
   header nav ul.open {
     display: flex;
@@ -662,4 +887,125 @@ footer {
   .carousel-btn.next {
     right: 5px;
   }
+  
+  /* Centralizar Redes Sociais em telas muito pequenas */
+  .redes-sociais {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+  
+  .redes-sociais a {
+    display: inline-block !important;
+  }
+  
+  .redes-sociais a svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+} 
+
+/* Estilos personalizados para o navbar Bootstrap */
+.navbar {
+  z-index: 999999 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: all 0.3s ease;
+  background: rgba(0,0,0,0.95) !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-height: 60px !important;
+}
+
+.navbar .container {
+  padding: 0.5rem 24px !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+}
+
+.navbar-nav {
+  gap: 2rem;
+}
+
+.navbar-nav .nav-link {
+  color: #C0C0C0 !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+  transition: color 0.2s;
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFD700 !important;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(192, 192, 192, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ajuste para o hero com navbar fixo */
+.hero {
+  margin-top: 60px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(0,0,0,0.95);
+    margin-top: 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .navbar-nav {
+    gap: 0;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid rgba(192, 192, 192, 0.1);
+  }
+  
+  .navbar-nav .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+} 
+
+/* Garantir que o botão WhatsApp mantenha o background verde */
+a[href*="whatsapp"] {
+  background: #25d366 !important;
+  color: #fff !important;
+}
+
+/* Estilo específico para o botão WhatsApp flutuante */
+a[style*="position: fixed"][href*="whatsapp"] {
+  background: #25d366 !important;
+  color: #fff !important;
+}
+
+/* Botão WhatsApp específico */
+a[href*="api.whatsapp.com"] {
+  background: #25d366 !important;
+  color: #fff !important;
+} 
+
+/* Garantir que o ícone do WhatsApp seja branco */
+a[href*="whatsapp"] i,
+a[href*="api.whatsapp.com"] i {
+  color: #fff !important;
+}
+
+/* Estilo específico para o ícone do WhatsApp flutuante */
+a[style*="position: fixed"][href*="whatsapp"] i {
+  color: #fff !important;
 } 

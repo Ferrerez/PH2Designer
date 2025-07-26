@@ -406,21 +406,33 @@ footer {
 @media (max-width: 600px) {
   .whatsapp-float {
     position: fixed !important;
-    right: 20px !important;
-    bottom: 20px !important;
-    width: 50px !important;
-    height: 50px !important;
+    right: 5vw !important;
+    bottom: 5vw !important;
+    width: 60px !important;
+    height: 60px !important;
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    z-index: 10000 !important;
+    z-index: 99999 !important;
     background: #25D366 !important;
     border-radius: 50% !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
   }
   .whatsapp-float svg {
-    width: 30px !important;
-    height: 30px !important;
+    width: 35px !important;
+    height: 35px !important;
+    display: block !important;
+    margin: auto !important;
   }
+}
+
+/* Garantir que o botão WhatsApp apareça sempre */
+.whatsapp-float {
+  position: fixed !important;
+  z-index: 99999 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Garantir que o botão apareça em todos os dispositivos */

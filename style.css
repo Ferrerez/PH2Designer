@@ -675,8 +675,8 @@ footer {
     font-size: 1.8rem !important;
     color: #FFD700 !important;
     font-weight: 700 !important;
-    -webkit-text-stroke: 1.5px #000 !important;
-    text-stroke: 1.5px #000 !important;
+    -webkit-text-stroke: 1.5px #fff !important;
+    text-stroke: 1.5px #fff !important;
   }
   .logo {
     margin-bottom: 0;

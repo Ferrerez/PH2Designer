@@ -84,10 +84,12 @@ html, body {
 .sobre h2,
 .servicos h2,
 .portfolio h2,
-.depoimentos h2,
-.contato h2 {
-  color: #C0C0C0 !important;
-  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3) !important;
+.redes-sociais h2,
+.instagram-feed h2 {
+  color: #FFD700 !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 1px #fff !important;
+  text-stroke: 1px #fff !important;
 }
 
 /* Garantir que os textos mantenham a cor original */
@@ -152,22 +154,8 @@ nav a:hover {
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 16px;
-  color: #C0C0C0;
-  text-shadow: 
-    0 0 10px rgba(192, 192, 192, 0.5),
-    0 0 20px rgba(192, 192, 192, 0.3),
-    0 0 30px rgba(192, 192, 192, 0.1);
-  background: linear-gradient(45deg, #C0C0C0, #E8E8E8, #C0C0C0);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shine 3s ease-in-out infinite;
-}
-
-@keyframes shine {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  color: #FFD700;
+  font-weight: 700;
 }
 .hero-content p {
   font-size: 1.3rem;
@@ -210,10 +198,12 @@ nav a:hover {
   min-width: 300px;
 }
 .sobre-texto h2 {
-  color: #C0C0C0;
+  color: #FFD700;
   font-size: 2rem;
   margin-bottom: 18px;
-  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+  text-shadow: none;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
 }
 .sobre-texto ul {
   list-style: none;
@@ -257,10 +247,12 @@ nav a:hover {
   padding: 60px 0;
 }
 .servicos h2 {
-  color: #C0C0C0;
+  color: #FFD700;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+  text-shadow: none;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
 }
 .servicos-grid {
   display: grid;
@@ -276,9 +268,11 @@ nav a:hover {
   border-bottom: 4px solid #FFD700;
 }
 .servico-card h3 {
-  color: #C0C0C0;
+  color: #FFD700;
   margin-bottom: 12px;
-  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+  text-shadow: none;
+  -webkit-text-stroke: 0.5px #fff;
+  text-stroke: 0.5px #fff;
 }
 
 .portfolio {
@@ -289,11 +283,13 @@ nav a:hover {
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 .portfolio h2 {
-  color: #C0C0C0;
+  color: #FFD700;
   font-size: 2rem;
   margin-bottom: 32px;
   text-align: center;
-  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+  text-shadow: none;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
 }
 
 /* Carrossel de Vídeos */
@@ -413,9 +409,11 @@ nav a:hover {
   border-top: 3px solid #FFD700;
 }
 .diferencial-card h4 {
-  color: #C0C0C0;
+  color: #FFD700;
   margin-bottom: 10px;
-  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+  text-shadow: none;
+  -webkit-text-stroke: 0.5px #fff;
+  text-stroke: 0.5px #fff;
 }
 .diferencial-card p {
   color: #C0C0C0;
@@ -429,10 +427,12 @@ nav a:hover {
   padding: 60px 0;
 }
 .instagram-feed h2 {
-  color: #C0C0C0;
+  color: #FFD700;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+  text-shadow: none;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
 }
 
 .redes-sociais {
@@ -440,10 +440,12 @@ nav a:hover {
   padding: 60px 0;
 }
 .redes-sociais h2 {
-  color: #C0C0C0;
+  color: #FFD700;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px rgba(192, 192, 192, 0.3);
+  text-shadow: none;
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #fff;
 }
 .redes-sociais-content {
   display: flex;
@@ -484,8 +486,10 @@ nav a:hover {
 .rede-social-card h3 {
   font-size: 1.5rem;
   margin-bottom: 8px;
-  color: #C0C0C0;
-  text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
+  color: #FFD700;
+  text-shadow: none;
+  -webkit-text-stroke: 0.5px #fff;
+  text-stroke: 0.5px #fff;
 }
 .rede-social-card p {
   font-size: 1rem;
@@ -669,12 +673,10 @@ footer {
   
   .hero-logo-titulo h1 {
     font-size: 1.8rem !important;
-    background: linear-gradient(45deg, #C0C0C0, #E8E8E8, #C0C0C0) !important;
-    background-size: 200% 200% !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    animation: shine 3s ease-in-out infinite !important;
+    color: #FFD700 !important;
+    font-weight: 700 !important;
+    -webkit-text-stroke: 1.5px #000 !important;
+    text-stroke: 1.5px #000 !important;
   }
   .logo {
     margin-bottom: 0;

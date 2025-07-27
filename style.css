@@ -1249,8 +1249,8 @@ footer {
   }
   .sobre-carousel-slide img {
     max-width: 100%;
-    max-height: 250px;
-    max-width: 400px;
+    max-height: 350px;
+    max-width: 500px;
     aspect-ratio: 16/9;
     object-fit: cover;
   }
@@ -1530,8 +1530,8 @@ footer {
   }
   .sobre-carousel-slide img {
     max-width: 100%;
-    max-height: 250px;
-    max-width: 400px;
+    max-height: 350px;
+    max-width: 500px;
     aspect-ratio: 16/9;
     object-fit: cover;
   }
@@ -1571,8 +1571,8 @@ footer {
   }
   .sobre-carousel-slide img {
     max-width: 100%;
-    max-height: 200px;
-    max-width: 350px;
+    max-height: 300px;
+    max-width: 450px;
     aspect-ratio: 16/9;
     object-fit: cover;
   }

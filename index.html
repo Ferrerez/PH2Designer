@@ -6,7 +6,7 @@
   <title>PH2Designer - Decoração e Reformas</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Bootstrap apenas para o menu -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -43,7 +43,7 @@
     <div class="container hero-content">
       <div class="hero-logo-titulo" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 0; margin: 0; padding: 0;">
         <img src="assets/logo-ph2designer.png" alt="Logo PH2Designer" style="height: 600px; width: auto; margin: 0; padding: 0; display: block;">
-        <h1 style="margin: 0; padding: 0; display: block; font-size: 2.8rem; color: #FFD700; font-weight: 700; -webkit-text-stroke: 2px #fff; text-stroke: 2px #fff;">Transformando espaços, inspirando vidas</h1>
+        <h1 class="titulo-elegante" style="margin: 0; padding: 0; display: block; font-size: 2.8rem; font-weight: 700;">Transformando espaços, inspirando vidas</h1>
       </div>
       <p>Decoração de interiores e reformas residenciais e comerciais com excelência.</p>
       <a href="https://wa.me/5521981334812?text=Olá%2C%20gostei%20do%20seu%20trabalho%20e%20queria%20solicitar%20um%20orçamento!" class="btn-cta" target="_blank" rel="noopener">Solicite um orçamento</a>
@@ -52,7 +52,7 @@
   <section class="sobre" id="sobre">
     <div class="container sobre-flex">
       <div class="sobre-texto">
-        <h2>Sobre a PH2Designer</h2>
+        <h2 class="titulo-elegante">Sobre a PH2Designer</h2>
         <p>Somos especialistas em criar ambientes sofisticados, funcionais e acolhedores. Nossa missão é transformar sonhos em realidade, com projetos personalizados e acompanhamento total da obra.</p>
         <ul>
           <li><strong>Missão:</strong> Realizar projetos que unem beleza, conforto e praticidade.</li>
@@ -61,13 +61,40 @@
         </ul>
       </div>
       <div class="sobre-img">
-        <img src="assets/sobre.jpg" alt="Projeto de decoração PH2Designer - Sala de estar e jantar moderna" class="sobre-imagem">
+        <div class="sobre-carousel">
+          <div class="sobre-carousel-container">
+            <div class="sobre-carousel-track">
+              <div class="sobre-carousel-slide">
+                <img src="assets/sobre.jpg" alt="Projeto de decoração PH2Designer - Sala de estar e jantar moderna" class="sobre-imagem">
+              </div>
+              <!-- Adicione mais slides aqui quando tiver mais fotos -->
+              <!-- <div class="sobre-carousel-slide">
+                <img src="assets/sobre2.jpg" alt="Projeto de decoração PH2Designer - Cozinha moderna" class="sobre-imagem">
+              </div> -->
+              <!-- <div class="sobre-carousel-slide">
+                <img src="assets/sobre3.jpg" alt="Projeto de decoração PH2Designer - Quarto principal" class="sobre-imagem">
+              </div> -->
+            </div>
+          </div>
+          <button class="sobre-carousel-btn prev" onclick="moveSobreSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="sobre-carousel-btn next" onclick="moveSobreSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="sobre-carousel-dots">
+            <span class="sobre-dot active" onclick="currentSobreSlide(1)"></span>
+            <!-- Adicione mais dots aqui quando tiver mais fotos -->
+            <!-- <span class="sobre-dot" onclick="currentSobreSlide(2)"></span> -->
+            <!-- <span class="sobre-dot" onclick="currentSobreSlide(3)"></span> -->
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <section class="servicos" id="servicos">
     <div class="container">
-      <h2>Nossos Serviços</h2>
+      <h2 class="titulo-elegante">Nossos Serviços</h2>
       <div class="servicos-grid">
         <div class="servico-card">
           <h3>Design de Interiores</h3>
@@ -90,7 +117,7 @@
   </section>
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <h2>Portfólio</h2>
+      <h2 class="titulo-elegante">Portfólio</h2>
       <div class="portfolio-carousel">
         <div class="carousel-container">
           <div class="carousel-track">
@@ -192,7 +219,7 @@
   </section>
   <section class="instagram-feed" id="instagram">
     <div class="container">
-      <h2>Instagram</h2>
+      <h2 class="titulo-elegante">Instagram</h2>
       <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
       <script src="https://static.elfsight.com/platform/platform.js" async></script>
       <div class="elfsight-app-e209a71b-f0c4-49bf-8ecc-8f9e10778b02" data-elfsight-app-lazy></div>
@@ -201,7 +228,7 @@
   
   <section class="redes-sociais" id="redes-sociais">
     <div class="container">
-      <h2>Redes Sociais</h2>
+      <h2 class="titulo-elegante">Redes Sociais</h2>
       <div class="redes-sociais-content">
         <div class="redes-sociais-grid">
           <a href="https://www.instagram.com/ph2designer/" target="_blank" rel="noopener" class="rede-social-card">
@@ -356,6 +383,44 @@
           updateCarousel();
         }
       });
+    });
+  </script>
+  
+  <script>
+    // Carrossel da Seção Sobre
+    let sobreCurrentSlide = 0;
+    const sobreSlides = document.querySelectorAll('.sobre-carousel-slide');
+    const sobreDots = document.querySelectorAll('.sobre-dot');
+    const sobreTrack = document.querySelector('.sobre-carousel-track');
+    const totalSobreSlides = sobreSlides.length;
+    
+    // Função para atualizar o carrossel sobre
+    function updateSobreCarousel() {
+      if (sobreTrack) {
+        sobreTrack.style.transform = `translateX(-${sobreCurrentSlide * 100}%)`;
+      }
+      
+      // Atualizar dots
+      sobreDots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === sobreCurrentSlide);
+      });
+    }
+    
+    // Função para mover slide (usada nos botões)
+    function moveSobreSlide(direction) {
+      sobreCurrentSlide = (sobreCurrentSlide + direction + totalSobreSlides) % totalSobreSlides;
+      updateSobreCarousel();
+    }
+    
+    // Função para ir para slide específico (usada nos dots)
+    function currentSobreSlide(slideIndex) {
+      sobreCurrentSlide = slideIndex - 1;
+      updateSobreCarousel();
+    }
+    
+    // Inicializar carrossel sobre quando a página carregar
+    document.addEventListener('DOMContentLoaded', function() {
+      updateSobreCarousel();
     });
   </script>
 </body>

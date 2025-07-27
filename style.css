@@ -17,6 +17,297 @@ body {
   min-height: 100vh;
 }
 
+/* Tipografia elegante para títulos principais */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Estilo especial para títulos amarelos */
+.titulo-elegante {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Efeito de brilho para textos amarelos */
+.texto-brilhante {
+  color: #FFD700;
+  text-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.5),
+    0 0 20px rgba(255, 215, 0, 0.3),
+    0 0 30px rgba(255, 215, 0, 0.1);
+  font-weight: 600;
+}
+
+/* Animação mais pronunciada para títulos elegantes */
+@keyframes brilhoSuave {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  25% {
+    opacity: 0.95;
+    transform: scale(1.03);
+    filter: brightness(1.3);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+    filter: brightness(1.5);
+  }
+  75% {
+    opacity: 0.95;
+    transform: scale(1.03);
+    filter: brightness(1.3);
+  }
+}
+
+/* Animação especial para o título principal do hero */
+@keyframes tituloHero {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+  }
+  25% {
+    opacity: 0.98;
+    transform: scale(1.04);
+    filter: brightness(1.4);
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.08);
+    filter: brightness(1.8);
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.2), 0 0 30px rgba(255, 215, 0, 0.5);
+  }
+  75% {
+    opacity: 0.98;
+    transform: scale(1.04);
+    filter: brightness(1.4);
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+}
+
+/* Animação de luz amarela piscando atrás das letras */
+@keyframes luzPiscando {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 
+      0 0 10px rgba(255, 215, 0, 0.5),
+      0 0 20px rgba(255, 215, 0, 0.3),
+      0 0 30px rgba(255, 215, 0, 0.2),
+      2px 2px 4px rgba(0,0,0,0.5);
+  }
+  25% {
+    transform: scale(1.02);
+    text-shadow: 
+      0 0 15px rgba(255, 215, 0, 0.7),
+      0 0 30px rgba(255, 215, 0, 0.5),
+      0 0 45px rgba(255, 215, 0, 0.3),
+      3px 3px 6px rgba(0,0,0,0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.9),
+      0 0 40px rgba(255, 215, 0, 0.7),
+      0 0 60px rgba(255, 215, 0, 0.5),
+      4px 4px 8px rgba(0,0,0,0.3);
+  }
+  75% {
+    transform: scale(1.02);
+    text-shadow: 
+      0 0 15px rgba(255, 215, 0, 0.7),
+      0 0 30px rgba(255, 215, 0, 0.5),
+      0 0 45px rgba(255, 215, 0, 0.3),
+      3px 3px 6px rgba(0,0,0,0.4);
+  }
+}
+
+/* Animação para a logo */
+@keyframes logoTitulo {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  25% {
+    opacity: 0.98;
+    transform: scale(1.04);
+    filter: brightness(1.4);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.08);
+    filter: brightness(1.8);
+  }
+  75% {
+    opacity: 0.98;
+    transform: scale(1.04);
+    filter: brightness(1.4);
+  }
+}
+
+/* Animação especial para os cards */
+@keyframes cardBrilho {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-color: #FFD700;
+  }
+  25% {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.1);
+    border-color: #FFA500;
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 24px rgba(255, 215, 0, 0.15);
+    border-color: #FFD700;
+  }
+  75% {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.1);
+    border-color: #FFA500;
+  }
+}
+
+/* Animação para os ícones das redes sociais */
+@keyframes iconeBrilho {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+    filter: brightness(1.3);
+  }
+}
+
+@keyframes iconePulse {
+  0%, 100% {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+  }
+  50% {
+    transform: scale(1.3);
+    filter: brightness(2);
+  }
+}
+
+/* Animação de pulso para títulos dos cards */
+@keyframes tituloPulse {
+  0%, 100% {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2), 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.3);
+    filter: brightness(2);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.1), 0 0 25px rgba(255, 215, 0, 0.7);
+  }
+}
+
+/* Animação de pulso para o menu (mais sutil) */
+@keyframes menuPulse {
+  0%, 100% {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3), 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.15);
+    filter: brightness(1.6);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2), 0 0 15px rgba(255, 215, 0, 0.5);
+  }
+}
+
+.titulo-elegante {
+  transition: all 0.3s ease;
+}
+
+/* Efeito de luz amarela atrás das letras */
+.hero-content h1 {
+  transition: all 0.4s ease;
+  position: relative;
+  text-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.8),
+    0 0 40px rgba(255, 215, 0, 0.6),
+    0 0 60px rgba(255, 215, 0, 0.4),
+    4px 4px 8px rgba(0,0,0,0.3);
+}
+
+.titulo-elegante:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Hover especial para o título principal */
+.hero-content h1:hover {
+  transform: scale(1.1);
+  filter: brightness(1.5);
+  text-shadow: 
+    0 0 25px rgba(255, 215, 0, 0.9),
+    0 0 50px rgba(255, 215, 0, 0.7),
+    0 0 75px rgba(255, 215, 0, 0.5),
+    6px 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Animação de tremor para o botão CTA */
+@keyframes botaoTremor {
+  0%, 100% {
+    transform: translateX(0) scale(1);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+  }
+  10% {
+    transform: translateX(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  }
+  20% {
+    transform: translateX(3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  }
+  30% {
+    transform: translateX(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  }
+  40% {
+    transform: translateX(3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    transform: translateX(-2px) scale(1.01);
+    box-shadow: 0 5px 18px rgba(255, 215, 0, 0.25);
+  }
+  60% {
+    transform: translateX(2px) scale(1.01);
+    box-shadow: 0 5px 18px rgba(255, 215, 0, 0.25);
+  }
+  70% {
+    transform: translateX(-1px) scale(1.005);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+  }
+  80% {
+    transform: translateX(1px) scale(1.005);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+  }
+  90% {
+    transform: translateX(0) scale(1);
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -90,6 +381,94 @@ html, body {
   text-shadow: none !important;
   -webkit-text-stroke: 1px #fff !important;
   text-stroke: 1px #fff !important;
+  font-family: 'Playfair Display', serif !important;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  -webkit-text-stroke: 0 !important;
+  text-stroke: 0 !important;
+}
+
+/* Estilos especiais para títulos com a nova fonte */
+.titulo-elegante {
+  font-family: 'Playfair Display', serif !important;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  -webkit-text-stroke: 0 !important;
+  text-stroke: 0 !important;
+  animation: brilhoSuave 3s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.titulo-elegante:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Aplicar animação a todos os títulos das seções */
+.sobre h2,
+.servicos h2,
+.portfolio h2,
+.redes-sociais h2,
+.instagram-feed h2,
+.sobre-texto h2,
+.portfolio h2 {
+  transition: all 0.3s ease;
+}
+
+.sobre h2:hover,
+.servicos h2:hover,
+.portfolio h2:hover,
+.redes-sociais h2:hover,
+.instagram-feed h2:hover,
+.sobre-texto h2:hover,
+.portfolio h2:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Aplicar animação aos títulos dos cards */
+.servico-card h3,
+.diferencial-card h4,
+.rede-social-card h3 {
+  transition: all 0.3s ease;
+}
+
+.servico-card h3:hover,
+.diferencial-card h4:hover {
+  animation: tituloPulse 0.6s ease-in-out infinite;
+  transform: scale(1.2);
+  filter: brightness(1.5);
+  transition: all 0.3s ease;
+}
+
+.rede-social-card h3:hover {
+  transition: all 0.3s ease;
+}
+
+/* Animação especial para os cards */
+.servico-card,
+.diferencial-card,
+.rede-social-card {
+  animation: cardBrilho 4s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.servico-card:hover,
+.diferencial-card:hover,
+.rede-social-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.2);
+  animation-play-state: paused;
 }
 
 /* Garantir que os textos mantenham a cor original */
@@ -137,11 +516,15 @@ nav a {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.1rem;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
   text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
 }
 nav a:hover {
   color: #FFD700;
+  animation: menuPulse 0.6s ease-in-out infinite;
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  transition: all 0.3s ease;
 }
 
 .hero {
@@ -156,6 +539,8 @@ nav a:hover {
   margin-bottom: 16px;
   color: #FFD700;
   font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
 }
 .hero-content p {
   font-size: 1.3rem;
@@ -171,15 +556,23 @@ nav a:hover {
   font-size: 1.1rem !important;
   font-weight: 700 !important;
   text-decoration: none !important;
-  transition: background 0.2s, color 0.2s !important;
+  transition: all 0.3s ease !important;
   display: inline-block !important;
   visibility: visible !important;
   opacity: 1 !important;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  animation: botaoTremor 4s ease-in-out infinite;
+  animation-delay: 3s;
 }
 
 .btn-cta:hover {
   background: #000 !important;
   color: #FFD700 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+  font-weight: 700;
+  animation-play-state: paused;
 }
 
 /* Restaurar estilos originais das seções */
@@ -201,9 +594,16 @@ nav a:hover {
   color: #FFD700;
   font-size: 2rem;
   margin-bottom: 18px;
-  text-shadow: none;
-  -webkit-text-stroke: 1px #fff;
-  text-stroke: 1px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
 }
 .sobre-texto ul {
   list-style: none;
@@ -242,17 +642,126 @@ nav a:hover {
   box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 }
 
+/* Carrossel da Seção Sobre */
+.sobre-carousel {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.sobre-carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sobre-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sobre-carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.sobre-carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Botões de navegação do carrossel sobre */
+.sobre-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+}
+
+.sobre-carousel-btn:hover {
+  background: #FFD700;
+  color: #000;
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  border-color: #FFA500;
+}
+
+.sobre-carousel-btn.prev {
+  left: 10px;
+}
+
+.sobre-carousel-btn.next {
+  right: 10px;
+}
+
+/* Indicadores de pontos do carrossel sobre */
+.sobre-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 0;
+}
+
+.sobre-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sobre-dot.active {
+  background: #FFD700;
+  transform: scale(1.2);
+}
+
+.sobre-dot:hover {
+  background: rgba(255, 215, 0, 0.6);
+}
+
 .servicos {
   background: #111;
   padding: 60px 0;
 }
 .servicos h2 {
   color: #FFD700;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: none;
-  -webkit-text-stroke: 1px #fff;
-  text-stroke: 1px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
 }
 .servicos-grid {
   display: grid;
@@ -266,13 +775,22 @@ nav a:hover {
   color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border-bottom: 4px solid #FFD700;
+  transition: all 0.4s ease;
 }
 .servico-card h3 {
   color: #FFD700;
   margin-bottom: 12px;
-  text-shadow: none;
-  -webkit-text-stroke: 0.5px #fff;
-  text-stroke: 0.5px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+  transition: all 0.3s ease;
 }
 
 .portfolio {
@@ -287,9 +805,16 @@ nav a:hover {
   font-size: 2rem;
   margin-bottom: 32px;
   text-align: center;
-  text-shadow: none;
-  -webkit-text-stroke: 1px #fff;
-  text-stroke: 1px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
 }
 
 /* Carrossel de Vídeos */
@@ -407,13 +932,22 @@ nav a:hover {
   max-width: 260px;
   text-align: center;
   border-top: 3px solid #FFD700;
+  transition: all 0.4s ease;
 }
 .diferencial-card h4 {
   color: #FFD700;
   margin-bottom: 10px;
-  text-shadow: none;
-  -webkit-text-stroke: 0.5px #fff;
-  text-stroke: 0.5px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+  transition: all 0.3s ease;
 }
 .diferencial-card p {
   color: #C0C0C0;
@@ -428,11 +962,19 @@ nav a:hover {
 }
 .instagram-feed h2 {
   color: #FFD700;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: none;
-  -webkit-text-stroke: 1px #fff;
-  text-stroke: 1px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
 }
 
 .redes-sociais {
@@ -441,11 +983,19 @@ nav a:hover {
 }
 .redes-sociais h2 {
   color: #FFD700;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
-  text-shadow: none;
-  -webkit-text-stroke: 1px #fff;
-  text-stroke: 1px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
 }
 .redes-sociais-content {
   display: flex;
@@ -472,24 +1022,41 @@ nav a:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 .rede-social-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.05);
   border-color: #FFD700;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3);
   color: #FFD700;
+  animation-play-state: paused;
 }
 .rede-social-card i {
   font-size: 3rem;
   margin-bottom: 16px;
   display: block;
   color: #FFD700;
+  animation: iconeBrilho 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.rede-social-card:hover i {
+  animation: iconePulse 0.6s ease-in-out infinite;
+  transform: scale(1.2);
 }
 .rede-social-card h3 {
   font-size: 1.5rem;
   margin-bottom: 8px;
   color: #FFD700;
-  text-shadow: none;
-  -webkit-text-stroke: 0.5px #fff;
-  text-stroke: 0.5px #fff;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 .rede-social-card p {
   font-size: 1rem;
@@ -517,6 +1084,7 @@ nav a:hover {
 }
 .form-contato h2 {
   color: #FFD700;
+  font-size: 2rem;
   margin-bottom: 18px;
 }
 .form-contato input,
@@ -581,6 +1149,17 @@ footer {
   justify-content: center;
   gap: 0;
 }
+
+/* Animação para a logo */
+.hero-logo-titulo img {
+  animation: logoTitulo 3s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.hero-logo-titulo img:hover {
+  transform: scale(1.1);
+  filter: brightness(2);
+}
 .hero-logo-titulo h1 {
   margin: 0;
 }
@@ -602,6 +1181,12 @@ footer {
   .sobre-imagem {
     max-width: 100%;
     margin-top: 20px;
+  }
+  
+  /* Ajustes específicos para o carrossel sobre em tablets */
+  .sobre-carousel {
+    max-width: 90%;
+    margin: 20px auto 0 auto;
   }
   .menu-toggle {
     display: flex;
@@ -657,6 +1242,19 @@ footer {
     font-size: 2.5rem;
   }
   
+  /* Ajustes específicos para o carrossel sobre em mobile */
+  .sobre-carousel {
+    max-width: 85%;
+    margin: 20px auto 0 auto;
+  }
+  .sobre-carousel-slide img {
+    max-width: 100%;
+    max-height: 250px;
+    max-width: 400px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  
 
   
   .hero-logo-titulo {
@@ -675,8 +1273,15 @@ footer {
     font-size: 1.8rem !important;
     color: #FFD700 !important;
     font-weight: 700 !important;
-    -webkit-text-stroke: 1.5px #fff !important;
-    text-stroke: 1.5px #fff !important;
+    font-family: 'Playfair Display', serif !important;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4) !important;
+    letter-spacing: 0.5px !important;
+    -webkit-text-stroke: 0 !important;
+    text-stroke: 0 !important;
   }
   .logo {
     margin-bottom: 0;
@@ -869,6 +1474,28 @@ footer {
     width: 10px;
     height: 10px;
   }
+  
+  /* Responsividade do carrossel sobre */
+  .sobre-carousel {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .sobre-carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .sobre-carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  .sobre-carousel-btn.prev {
+    left: 10px;
+  }
+  .sobre-carousel-btn.next {
+    right: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -896,6 +1523,30 @@ footer {
     right: 5px;
   }
   
+  /* Responsividade do carrossel sobre para telas muito pequenas */
+  .sobre-carousel {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .sobre-carousel-slide img {
+    max-width: 100%;
+    max-height: 250px;
+    max-width: 400px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .sobre-carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .sobre-carousel-btn.prev {
+    left: 8px;
+  }
+  .sobre-carousel-btn.next {
+    right: 8px;
+  }
+  
   /* Centralizar Redes Sociais em telas muito pequenas */
   .redes-sociais {
     flex-direction: row !important;
@@ -911,6 +1562,19 @@ footer {
   .redes-sociais a svg {
     width: 28px !important;
     height: 28px !important;
+  }
+  
+  /* Carrossel sobre para telas muito pequenas */
+  .sobre-carousel {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .sobre-carousel-slide img {
+    max-width: 100%;
+    max-height: 200px;
+    max-width: 350px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
   }
 } 
 
@@ -941,12 +1605,16 @@ footer {
   font-weight: 700;
   font-size: 1.1rem;
   text-shadow: 0 0 5px rgba(192, 192, 192, 0.3);
-  transition: color 0.2s;
+  transition: all 0.3s ease;
   padding: 0.5rem 1rem !important;
 }
 
 .navbar-nav .nav-link:hover {
   color: #FFD700 !important;
+  animation: menuPulse 0.6s ease-in-out infinite;
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  transition: all 0.3s ease;
 }
 
 .navbar-toggler {
